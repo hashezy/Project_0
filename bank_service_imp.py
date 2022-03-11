@@ -38,3 +38,16 @@ class BankServiceImp(BankServiceInterface):
             return self.acct_dao.delete_acct_by_id(acct_id)
         else:
             raise BadBankInfo("Please provide a valid account Id")
+"""
+    def service_deposit_withdraw(self, acct: Bank) -> Bank:
+        for existing_acct in self.acct_dao.accts_list:
+            if existing_acct.acct_id == acct.acct_id and acct.acct_balance > existing_acct.acct_balance:
+                deposit = acct.acct_balance - existing_acct.acct_balance
+                print(f"You deposited ${deposit} successfully")
+            elif existing_acct.acct_id == acct.acct_id and acct.acct_balance < existing_acct.acct_balance:
+                withdraw = existing_acct.acct_balance - abs(acct.acct_balance)
+                print(f"You withdrew ${withdraw} successfully")
+            elif acct.acct_balance == 0:
+                raise BadBankInfo("This is the correct account type")
+        return self.acct_dao.update_acct_by_id(acct)
+"""
