@@ -1,0 +1,2 @@
+class BadBankInfo(Exception):
+    pass
